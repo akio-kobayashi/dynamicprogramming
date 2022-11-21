@@ -9,7 +9,7 @@ class Tag(Enum):
   Correct=1
   Substitution=2
   Deletion=3
-  Indertion=4
+  Insertion=4
 
 '''
   Nodeクラス
