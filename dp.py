@@ -1,4 +1,5 @@
 from enum import Enum
+from IPython.core.display import display, HTML
 
 '''
   Tag クラス
