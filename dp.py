@@ -26,10 +26,12 @@ class Node:
 
 def dynamic_programming(str1,str2):
 
-  str1.insert(0, '<b>')
-  str1.append('<e>')
-  str2.insert(0, '<b>')
-  str2.append('<e>')
+  if str1[0] != '<b>':
+    str1.insert(0, '<b>')
+    str1.append('<e>')
+  if str2[0] != '<b>':
+    str2.insert(0, '<b>')
+    str2.append('<e>')
 
   M,N=len(str1),len(str2)
 
