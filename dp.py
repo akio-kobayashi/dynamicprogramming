@@ -59,14 +59,14 @@ def dynamic_programming(str1,str2):
 
       # (m-1, n) -> (m, n) deletion
       score=lattice[m-1][n].score+1
-      if score < node.score:
+      if score <= node.score:
         node.score=score
         node.ptr=[m-1, n]
         node.tag=Tag.Deletion
 
       # (m, n-1) -> (m, n) # insertion
       score=lattice[m][n-1].score+1
-      if score < node.score:
+      if score <= node.score:
         node.score=score
         node.ptr=[m,n-1]
         node.tag=Tag.Insertion
