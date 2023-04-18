@@ -26,6 +26,11 @@ class Node:
 
 def dynamic_programming(str1,str2):
 
+  str1.insert(0, '<b>')
+  str1.append('<e>')
+  str2.insert(0, '<b>')
+  str2.append('<e>')
+
   M,N=len(str1),len(str2)
 
   lattice = [ [Node() for n in range(N+1) ] for m in range(M+1) ]
@@ -103,6 +108,11 @@ def html_text(tags, str1, str2):
       str2_html.append("<font color='green'>"+str2[n_str2]+"</font>")
       n_str2+=1
 
+  str1_html.pop(0)
+  str1_html.pop(-1)
+  str2_html.pop(0)
+  str2_html.pop(-1)
+ 
   str1_html=''.join(str1_html)
   str2_html=''.join(str2_html)
 
